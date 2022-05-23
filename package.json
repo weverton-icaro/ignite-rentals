@@ -10,6 +10,7 @@
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
+    "@jest/globals": "^28.1.0",
     "bcrypt": "^5.0.1",
     "csv-parse": "^5.0.4",
     "dayjs": "^1.11.0",

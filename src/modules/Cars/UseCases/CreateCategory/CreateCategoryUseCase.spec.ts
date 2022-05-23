@@ -17,7 +17,7 @@ describe("Create Category", () => {
   it("should be able to create a new category", async () => {
     const category = {
       name: "Category Test",
-      description: " Category description Test",
+      description: "Category description Test",
     };
 
     await createCategoryUseCase.execute({
@@ -35,7 +35,7 @@ describe("Create Category", () => {
   it("should not be able to create a new category with name exists", async () => {
     const category = {
       name: "Category Test",
-      description: " Category description Test",
+      description: "Category description Test",
     };
 
     await createCategoryUseCase.execute({
@@ -48,6 +48,6 @@ describe("Create Category", () => {
         name: category.name,
         description: category.description,
       })
-    ).rejects.toEqual(new AppError("Category already exists"));
+    ).rejects.toEqual(new AppError("Category already exists!"));
   });
 });
