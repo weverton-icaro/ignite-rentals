@@ -21,6 +21,6 @@ export class UploadCarImageController {
       image_name,
     });
 
-    return response.status(201).send();
+    return response.status(201).send(image_name);
   }
 }

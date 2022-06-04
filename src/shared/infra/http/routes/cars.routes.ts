@@ -6,7 +6,7 @@ import { CreateCarController } from "@modules/Cars/UseCases/CreateCar/CreateCarC
 import { CreateCarSpecificationController } from "@modules/Cars/UseCases/CreateCarSpecification/CreateCarSpecificationController";
 import { ListAllCarsController } from "@modules/Cars/UseCases/ListAllCars/ListAllCarsController";
 import { ListAvailableCarsController } from "@modules/Cars/UseCases/ListAvailableCars/ListAvailableCarsController";
-import { UploadCarImageController } from "@modules/Cars/UseCases/UploadCarImage/UploadCarImageController";
+import { UploadCarImageController } from "@modules/Cars/UseCases/Upload/UploadCarImages/UploadCarImageController";
 
 import { ensureAdmin } from "../middlewares/ensureAdmin";
 import { ensureAuth } from "../middlewares/ensureAuth";
@@ -19,7 +19,7 @@ const listAvailableCars = new ListAvailableCarsController();
 const createCarSpecificationController = new CreateCarSpecificationController();
 const uploadCarImageController = new UploadCarImageController();
 
-const upload = multer(uploadConfig.upload("./tmp/car"));
+const upload = multer(uploadConfig);
 
 carsRoutes.use(ensureAuth);
 
