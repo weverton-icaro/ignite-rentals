@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import "reflect-metadata";
 import "dotenv/config";
 import express, { Request, Response, NextFunction } from "express";
@@ -26,7 +27,7 @@ app.use("/car", express.static(`${upload.tmpFolder}/car`));
 app.use(router);
 
 app.use(
-  (err: Error, request: Request, response: Response, next: NextFunction) => {
+  (err: Error, _request: Request, response: Response, _next: NextFunction) => {
     if (err instanceof AppError) {
       return response.status(err.statusCode).json({ message: err.message });
     }
