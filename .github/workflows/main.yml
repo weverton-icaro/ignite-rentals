@@ -54,4 +54,4 @@ jobs:
               yarn
               ./node_modules/.bin/typeorm migration:run
               pm2 restar api-rentals
-   
+              
