@@ -53,5 +53,5 @@ jobs:
               cd ~/api/ignite-rentals
               yarn
               ./node_modules/.bin/typeorm migration:run
-              pm2 restar api-rentals
+              pm2 restart api-rentals
               
